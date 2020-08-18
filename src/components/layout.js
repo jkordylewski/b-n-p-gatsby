@@ -38,6 +38,9 @@ const Layout = ({ children }) => {
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <div>
+            a <a href="https://www.jkordylewski.com">jkordylewski.com</a> site
+          </div>
         </footer>
       </div>
     </>
