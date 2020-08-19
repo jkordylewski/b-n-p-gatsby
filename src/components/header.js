@@ -8,6 +8,10 @@ const Header = ({ siteTitle }) => (
       background: `rgb(50 115 220)`,
       marginBottom: `1.45rem`,
       textAlign: `right`,
+      background: "#12c2e9",
+      background:
+        "-webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9)",
+      background: "linear-gradient(to right, #f64f59, #c471ed, #12c2e9)",
     }}
   >
     <div

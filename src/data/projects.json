@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Lines n Things",
+    "slug": "project-1",
+    "url": "https://example.com/",
+    "image": "../images/experiment1.jpg",
+    "teaser": "Excellent experiment.",
+    "description": "Vestibulum auctor mauris eget metus elementum, sit amet tincidunt nisl bibendum. Proin non rhoncus diam, vel pretium mi. Nam arcu augue, pretium vitae volutpat a, auctor sed mauris. Nam aliquam laoreet nisl a ultrices. Nunc ante turpis, semper eu luctus vel, rutrum ut quam. Cras efficitur aliquam libero quis iaculis. Sed ut massa leo. Proin vel quam at justo tristique molestie non nec nibh. Proin maximus magna sapien, eu feugiat nisi dictum quis. Praesent eget sem neque. Pellentesque vel consequat orci. Donec at molestie velit."
+  },
+  {
+    "title": "Three JS Starter",
+    "slug": "project-2",
+    "url": "https://example.org/",
+    "image": "../images/experiment2.jpg",
+    "teaser": "This one is also good.",
+    "description": "Pellentesque egestas leo nec fermentum lacinia. Proin mattis sagittis sapien sed congue. Vestibulum malesuada libero in ligula varius dignissim. Fusce vitae vulputate nisi, quis convallis tellus. Aenean sed diam lacus. Suspendisse ornare semper tincidunt. Maecenas dapibus ex quis ligula pellentesque interdum."
+  }
+]
