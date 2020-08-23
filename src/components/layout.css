@@ -626,3 +626,12 @@ pre tt:after {
   margin-bottom: 2rem;
   border-bottom: 1px solid #ccc;
 }
+
+header {
+  margin-bottom: 1.45rem;
+  text-align: right;
+  background: rgb(50 115 220);
+  background: #12c2e9;
+  background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+  background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+}

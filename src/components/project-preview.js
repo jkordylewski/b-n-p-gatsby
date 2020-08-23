@@ -7,7 +7,7 @@ const ProjectPreview = ({ title, teaser, slug, imageData }) => (
     <Link to={`/${slug}/`}>
       <Image fluid={imageData} alt={title} />
     </Link>
-    <h2>
+    <h2 className="title is-2">
       <Link to={`/${slug}/`}>{title}</Link>
     </h2>
     <p>{teaser}</p>

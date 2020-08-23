@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+// If need, change your variables before importing Bulma
+// $title-color: #ff0000;
+
+$family-sans-serif: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+  'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+
+$fullhd: 1200;
+
+$gap: 56px;
+
+@import '~bulma/bulma.sass';
