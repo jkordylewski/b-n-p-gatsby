@@ -19,7 +19,7 @@ export default ({ data, pageContext }) => {
 
       return (
         <Link className="button is-primary mr-4" to={path}>
-          &larr; previous:{previous.frontmatter.slug}
+          &laquo; previous: {previous.frontmatter.slug}
         </Link>
       );
     }
@@ -35,7 +35,7 @@ export default ({ data, pageContext }) => {
 
       return (
         <Link className="button is-primary" to={nextpath}>
-          next:{next.frontmatter.slug} &rarr;
+          next: {next.frontmatter.slug} &raquo;
         </Link>
       );
     }
@@ -43,7 +43,7 @@ export default ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <Link to="/">&larr; back to homepage</Link>
+      <Link to="/">&laquo; back to homepage</Link>
       <br />
       <br />
       <h3>hello</h3>

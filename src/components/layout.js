@@ -9,6 +9,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 
+import Image from '../components/image';
+
 import Header from './header';
 import './layout.css';
 
@@ -50,12 +52,21 @@ const Layout = ({ children }) => {
           <br />
           &nbsp; &mdash; &sect; &mdash; &nbsp;
           <br />
+          <br />
           bits-n-pixels.com © {new Date().getFullYear()}
           <br /> a <a href="https://www.jkordylewski.com">
             jkordylewski.com
           </a>{' '}
           site
           <br />
+          <div
+            style={{
+              maxWidth: `100px`,
+              margin: `1.45rem auto`,
+            }}
+          >
+            <Image />
+          </div>
         </footer>
       </div>
     </>

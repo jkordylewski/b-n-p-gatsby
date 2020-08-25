@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
-import ProjectPreview from '../components/project-preview';
+import PostPreview from '../components/post-preview';
 //import { format } from 'date-fns';
 import moment from 'moment';
 
@@ -32,7 +32,9 @@ const BlogPage = () => {
   return (
     <Layout>
       <SEO title="Blog" />
-      <h2 className="title is-2 has-text-weight-bold">Bits + Pixels Blog</h2>
+      <h2 className="title is-1 has-text-weight-bold is-family-monospace">
+        Varia a.k.a the Blog
+      </h2>
       <div className="columns">
         <div className="column is-three-fifths">
           {posts.map(({ node: project }) => {
@@ -44,9 +46,9 @@ const BlogPage = () => {
             const dateSegment = moment(newdate).format('YYYY/MM');
             const path = `blog/${dateSegment}/${slug}`;
 
-            return <ProjectPreview title={title} slug={path} />;
+            return <PostPreview title={title} slug={path} date={date} />;
           })}
-          <Link to="/">View homepage</Link>
+          <Link to="/">&laquo; homepage</Link>
         </div>
       </div>
     </Layout>

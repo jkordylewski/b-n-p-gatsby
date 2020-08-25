@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import ProjectPreview from '../components/project-preview';
+import PostPreview from '../components/post-preview';
 //import { format } from 'date-fns';
 import moment from 'moment';
 
@@ -69,19 +70,12 @@ const IndexPage = () => {
               />
             );
           })}
-          <p>
-            <p className="content">
-              <em>More COMING SOON.</em>
-            </p>
-          </p>
-          <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-            <Image />
-          </div>
-          <Link to="/page-2/">Go to page 2</Link> <br />
-          <Link to="/colophon/">Colophon</Link> <br />
-          {/* <Link to="/using-typescript/">Go to "Using TypeScript"</Link> */}
+          <Link className="button is-primary" to="/projects/">
+            See all projects
+          </Link>{' '}
+          <br />
         </div>
-        <div className="column">
+        <div className="column is-one-quarter">
           <h3 className="title is-4">Blog</h3>
           {posts.map(({ node: project }) => {
             const title = project.frontmatter.title;
@@ -92,9 +86,19 @@ const IndexPage = () => {
             const dateSegment = moment(newdate).format('YYYY/MM');
             const path = `blog/${dateSegment}/${slug}`;
 
-            return <ProjectPreview title={title} slug={path} />;
+            return <PostPreview title={title} slug={path} date={date} />;
           })}
-          <Link to="/blog/">All posts</Link> <br />
+          <Link className="button" to="/blog/">
+            See all posts
+          </Link>{' '}
+          <br />
+        </div>
+      </div>
+      <div className="columns">
+        <div className="column is-three-fifths">
+          <Link to="/page-2/">Go to page 2</Link> <br />
+          <Link to="/colophon/">Colophon</Link> <br />
+          {/* <Link to="/using-typescript/">Go to "Using TypeScript"</Link> */}
         </div>
       </div>
     </Layout>
