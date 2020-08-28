@@ -16,20 +16,20 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
         name: `project`,
         path: `${__dirname}/src/data`,
       },
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
         name: `blog`,
         path: `${__dirname}/src/data/blog`,
       },
     },
-    "gatsby-transformer-json",
+    'gatsby-transformer-json',
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -48,4 +48,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

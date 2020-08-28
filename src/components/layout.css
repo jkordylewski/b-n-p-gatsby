@@ -627,6 +627,10 @@ pre tt:after {
   /* border-bottom: 1px solid #ccc; */
 }
 
+.project-preview img {
+  border-radius: 3px;
+}
+
 header {
   margin-bottom: 1.45rem;
   text-align: right;
@@ -634,4 +638,31 @@ header {
   background: #12c2e9;
   background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
   background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+}
+
+.hp-links {
+  background-color: beige;
+  border-radius: 3px;
+  padding: 16px 18px;
+
+  background-image: linear-gradient(
+    3deg,
+    rgb(249, 144, 110),
+    rgb(225, 14, 225)
+  );
+
+  color: #ff0;
+}
+
+.hp-links .title {
+  color: #fff;
+  margin-bottom: 0.5rem !important;
+}
+
+.hp-links li {
+  margin-bottom: 0.5rem;
+}
+
+.hp-links a {
+  text-transform: uppercase;
 }

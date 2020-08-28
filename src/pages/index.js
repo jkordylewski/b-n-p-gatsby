@@ -42,10 +42,19 @@ const IndexPage = () => {
           }
         }
       }
+      allLinksJson {
+        edges {
+          node {
+            title
+            url
+          }
+        }
+      }
     }
   `);
   const projects = data.allProjectsJson.edges || {};
   const posts = data.allMarkdownRemark.edges || {};
+  const links = data.allLinksJson.edges || {};
   return (
     <Layout>
       <SEO title="Home" />
@@ -76,22 +85,42 @@ const IndexPage = () => {
           <br />
         </div>
         <div className="column is-one-quarter">
-          <h3 className="title is-4">Blog</h3>
-          {posts.map(({ node: project }) => {
-            const title = project.frontmatter.title;
-            const slug = project.frontmatter.slug;
-            const date = project.frontmatter.date;
+          <div className="hp-blog">
+            <h3 className="title is-4">Blog</h3>
+            {posts.map(({ node: project }) => {
+              const title = project.frontmatter.title;
+              const slug = project.frontmatter.slug;
+              const date = project.frontmatter.date;
 
-            var newdate = new Date(date);
-            const dateSegment = moment(newdate).format('YYYY/MM');
-            const path = `blog/${dateSegment}/${slug}`;
+              var newdate = new Date(date);
+              const dateSegment = moment(newdate).format('YYYY/MM');
+              const path = `blog/${dateSegment}/${slug}`;
 
-            return <PostPreview title={title} slug={path} date={date} />;
-          })}
-          <Link className="button" to="/blog/">
-            See all posts
-          </Link>{' '}
+              return <PostPreview title={title} slug={path} date={date} />;
+            })}
+            <Link className="button" to="/blog/">
+              See all posts
+            </Link>{' '}
+            <br />
+          </div>
           <br />
+          <div className="hp-links">
+            <h3 className="title is-4">Artists</h3>
+            <ul>
+              {links.map(({ node: link }) => {
+                const title = link.title;
+                const url = link.url;
+
+                return (
+                  <li>
+                    <Link to={url}>{title}</Link>
+                  </li>
+                );
+              })}
+            </ul>
+
+            <br />
+          </div>
         </div>
       </div>
       <div className="columns">
