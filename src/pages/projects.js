@@ -36,6 +36,9 @@ const IndexPage = () => {
       <h2 className="title is-2 has-text-weight-bold is-family-monospace">
         Projects + Experiments
       </h2>
+      <h3 className="title is-3 is-family-monospace">
+        Showcasing my own creative coding projects and experiments
+      </h3>
       <div className="columns">
         <div className="column is-four-fifths">
           {projects.map(({ node: project }) => {

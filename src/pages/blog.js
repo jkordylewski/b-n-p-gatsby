@@ -13,7 +13,7 @@ import SEO from '../components/seo';
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
     {
-      allMarkdownRemark {
+      allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
         edges {
           node {
             frontmatter {
@@ -33,8 +33,11 @@ const BlogPage = () => {
     <Layout>
       <SEO title="Blog" />
       <h2 className="title is-1 has-text-weight-bold is-family-monospace">
-        Varia a.k.a the Blog
+        The Blog
       </h2>
+      <h3 className="title is-3 is-family-monospace">
+        Collecting interesting projects from around the web
+      </h3>
       <div className="columns">
         <div className="column is-three-fifths">
           {posts.map(({ node: project }) => {

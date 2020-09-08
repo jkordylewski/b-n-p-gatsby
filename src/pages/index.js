@@ -74,7 +74,7 @@ const IndexPage = () => {
         Bits + Pixels
       </h1>
       <div className="columns">
-        <div className="column is-three-fifths">
+        <div className="column is-two-fifths">
           <h2 className="title is-2">Experiments</h2>
           {projects.map(({ node: project }) => {
             const title = project.title;
@@ -96,7 +96,7 @@ const IndexPage = () => {
           </Link>{' '}
           <br />
         </div>
-        <div className="column is-one-fifth">
+        <div className="column is-two-fifths">
           <div className="hp-blog">
             <h3 className="title is-4">Blog</h3>
             {posts.map(({ node: project }) => {
