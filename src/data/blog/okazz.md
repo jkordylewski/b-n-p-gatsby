@@ -1,9 +1,9 @@
 ---
-title: 'Goodbye'
-date: '02/11/2014'
-author: 'Chris Ashî'
-slug: goodbye
-id: 3
+title: 'Okazz and the Plight of Dynamically Generated Art'
+date: '08/28/2020'
+author: 'Janski'
+slug: okaz
+id: 4
 image: '../../images/okazz.jpg'
 ---
 

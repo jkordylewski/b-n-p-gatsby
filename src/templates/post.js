@@ -2,9 +2,10 @@ import React from 'react';
 import moment from 'moment';
 import { Link } from 'gatsby';
 import Layout from '../components/layout';
+import Image from 'gatsby-image';
 
 export default ({ data, pageContext }) => {
-  const { title, author, date } = data.markdownRemark.frontmatter;
+  const { title, author, date, image } = data.markdownRemark.frontmatter;
   const { html } = data.markdownRemark;
   const { next, previous } = pageContext;
   console.log(data, pageContext);
@@ -46,12 +47,14 @@ export default ({ data, pageContext }) => {
       <Link to="/">&laquo; back to homepage</Link>
       <br />
       <br />
-      <h3>hello</h3>
+      <br />
+      <h5 className="title is-5 has-text-right">{date}</h5>
       <h1 className="title is-2">{title}</h1>
-      <h4 style={{ color: 'rgb(165, 164, 164)' }}>
-        {author} <span style={{ fontSize: '0.8em' }}> -{date}</span>
-      </h4>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      {/* <h4 style={{ color: 'rgb(165, 164, 164)' }}>
+        {author} <span style={{ fontSize: '0.8em' }}></span>
+      </h4> */}
+      {image && <Image fluid={image.childImageSharp.fluid} alt={title} />}
+      <div className="is-size-5" dangerouslySetInnerHTML={{ __html: html }} />
 
       <div className="mt-4 mb-5">
         {prevButton()}
@@ -69,6 +72,13 @@ export const query = graphql`
         title
         author
         date
+        image {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

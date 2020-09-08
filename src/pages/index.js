@@ -30,7 +30,10 @@ const IndexPage = () => {
           }
         }
       }
-      allMarkdownRemark {
+      allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        limit: 5
+      ) {
         edges {
           node {
             frontmatter {
@@ -50,11 +53,20 @@ const IndexPage = () => {
           }
         }
       }
+      allToolsJson {
+        edges {
+          node {
+            title
+            url
+          }
+        }
+      }
     }
   `);
   const projects = data.allProjectsJson.edges || {};
   const posts = data.allMarkdownRemark.edges || {};
   const links = data.allLinksJson.edges || {};
+  const tools = data.allToolsJson.edges || {};
   return (
     <Layout>
       <SEO title="Home" />
@@ -84,7 +96,7 @@ const IndexPage = () => {
           </Link>{' '}
           <br />
         </div>
-        <div className="column is-one-quarter">
+        <div className="column is-one-fifth">
           <div className="hp-blog">
             <h3 className="title is-4">Blog</h3>
             {posts.map(({ node: project }) => {
@@ -104,10 +116,29 @@ const IndexPage = () => {
             <br />
           </div>
           <br />
+        </div>
+        <div className="column is-one-fifth">
           <div className="hp-links">
             <h3 className="title is-4">Artists</h3>
             <ul>
               {links.map(({ node: link }) => {
+                const title = link.title;
+                const url = link.url;
+
+                return (
+                  <li>
+                    <Link to={url}>{title}</Link>
+                  </li>
+                );
+              })}
+            </ul>
+
+            <br />
+          </div>
+          <div className="hp-tools">
+            <h3 className="title is-4">Tools</h3>
+            <ul>
+              {tools.map(({ node: link }) => {
                 const title = link.title;
                 const url = link.url;
 
